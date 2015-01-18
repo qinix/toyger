@@ -1,0 +1,19 @@
+{
+  "name": "toyger",
+  "description": "",
+  "keywords": [
+    ""
+  ],
+  "author": "Eric Zhang <i@qinix.com>",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qinix/toyger.git"
+  },
+  "main": "toyger.js",
+  "devDependencies": {
+    "coffee-script": "1.8.0",
+    "kramed": "^0.4.4",
+    "uglify-js": "2.3.6"
+  }
+}
