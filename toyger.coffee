@@ -121,7 +121,7 @@ display_search_results = (data) ->
   else
     show_error "Oops! No matches found"
 
-  $(toyger.content_id).html result_html
+  $(toyger.content_id).html results_html
   $(toyger.search_results_class + ' .link').click ->
     destination = "\##{$(this).html().replace('.md', '')}"
     location.hash = destination
@@ -150,7 +150,7 @@ searchbar_listener = (event) ->
   if event.which == 13
     q = $("input[name=#{toyger.search_name}]").val()
     if q != ''
-      location.hash = "\##search=#{q}"
+      location.hash = "\#search=#{q}"
     else
       alert('Error! Empty search query!')
 
