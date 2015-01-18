@@ -26,7 +26,7 @@ toyger = root.toyger =
   github_repo: null
 
 toyger.run = (options) ->
-  $.merge toyger.config, options
+  $.merge toyger, options
 
   init_sidebar_section() if toyger.sidebar
   init_back_to_top_button() if toyger.back_to_top_button
