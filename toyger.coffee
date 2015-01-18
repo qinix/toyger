@@ -26,7 +26,7 @@ toyger = root.toyger =
   github_repo: null
 
 toyger.run = (options) ->
-  $.merge toyger, options
+  $.extend toyger, options
 
   init_sidebar_section() if toyger.sidebar
   init_back_to_top_button() if toyger.back_to_top_button
@@ -60,7 +60,7 @@ init_edit_button = ->
       hash = location.hash.replace("#", "/")
       hash = "/" + toyger.index.replace(".md", "") if hash == ""
 
-    window.open "#{toyger.base_url}#{hash}.md"
+      window.open "#{toyger.base_url}#{hash}.md"
 
 init_searchbar = ->
   sidebar = $(toyger.sidebar_id).html()
@@ -278,11 +278,11 @@ page_getter = ->
 
     $('pre code').each (i, block) ->
       hljs.highlightBlock(block) if hljs?
-    .fail ->
-      show_error('Oops! ... File not found!')
-    .always ->
-      clearInterval loading
-      $(toyger.loading_id).hide()
+  .fail ->
+    show_error('Oops! ... File not found!')
+  .always ->
+    clearInterval loading
+    $(toyger.loading_id).hide()
 
 router = ->
   hash = location.hash
