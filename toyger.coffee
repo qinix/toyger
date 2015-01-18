@@ -64,7 +64,7 @@ init_edit_button = ->
 
 init_searchbar = ->
   sidebar = $(toyger.sidebar_id).html()
-  match = "toyger:searchbar"
+  match = "[toyger:searchbar]"
 
   # html input searchbar
   search = "<input name='#{toyger.search_name}' type='search' results='10'>"
